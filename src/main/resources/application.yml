@@ -1,0 +1,37 @@
+
+spring:
+    main:
+        allow-bean-definition-overriding: true
+    authorization:
+        admin:
+            role: ADMIN
+        user:
+            role: ADMIN,USER
+    mail:
+        host: smtp.gmail.com
+        port: 587
+        username: tamnltSSD@gmail.com
+        password: Thewitcher3
+        properties:
+            mail:
+                debug: false
+                transport:
+                    protocol: smtp
+                smtp:
+                    auth: true
+                    connectiontimeout: 5000
+                    starttls:
+                        enable: true
+                    ssl:
+                        trust: smtp.gmail.com
+                    timeout: 5000
+                    writetimeout: 5000
+compare:
+    admin:
+        email: admin@gmail.com
+        name: admin
+        password: 12345678
+    jwt:
+        expiration-millis: 864000000
+        secret: JWTCOMPARE_PRODUCTS_SuperSecretKey
+        short-lived-millis: 120000
