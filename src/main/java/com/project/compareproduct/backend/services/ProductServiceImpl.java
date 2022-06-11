@@ -910,14 +910,14 @@ public class ProductServiceImpl implements ProductService {
         List<String> uList = laptopAmzRepository.findAllLaptopAmzUrl();
         String[] urlListAmz = {
                 "https://www.amazon.com/Samsung-Electronics-Platform-Processor-Long-Lasting/dp/B09D8SGXB6/ref=sr_1_3?crid=2IFA2JQI69CT&keywords=Samsung%2BGalaxy%2BBook%2BPro%2BWindows%2B11%2BIntel%2BEvo%2BPlatform%2BLaptop%2BComputer%2B13.3%22%2BAMOLED%2BScreen%2B11th%2BGen%2BIntel%2BCore%2Bi5%2BProcessor%2B8GB%2BMemory%2B256GB%2BSSD%2BLong-Lasting%2BBattery%2C%2BMystic%2BSilver&qid=1653188478&sprefix=samsung%2Bgalaxy%2Bbook%2Bpro%2Bwindows%2B11%2Bintel%2Bevo%2Bplatform%2Blaptop%2Bcomputer%2B13.3%2Bamoled%2Bscreen%2B11th%2Bgen%2Bintel%2Bcore%2Bi5%2Bprocessor%2B8gb%2Bmemory%2B256gb%2Bssd%2Blong-lasting%2Bbattery%2C%2Bmystic%2Bsilver%2Caps%2C436&sr=8-3&th=1",
-                "https://www.amazon.com/Apple-MacBook-MNQF2LL-i5-6287U-Renewed/dp/B07CN725RG/ref=sr_1_2?crid=EMJM14N5SOVR&keywords=2019+Apple+MacBook+Pro&qid=1653188604&sprefix=2019+apple+macbook+pro+%2Caps%2C313&sr=8-2",
+                "https://www.amazon.com/Dell-Latitude-5520-11-1135-8GB/dp/B08TLPNZ47/ref=sr_1_4?crid=3Q5LD5OT7SJC&keywords=Dell+Latitude+5520&qid=1654508527&sprefix=dell+latitude+5520%2Caps%2C332&sr=8-4",
                 "https://www.amazon.com/ASUS-Chromebook-Touchscreen-Magnesium-Alloy-CX9400CEA-DS762T/dp/B09F8Y2HJW/ref=sr_1_3?crid=2KBIMCYMZB810&keywords=ASUS+Chromebook+CX9&qid=1653193599&sprefix=asus+chromebook+cx9%2Caps%2C929&sr=8-3",
                 "https://www.amazon.com/HP-Dual-Core-Graphics-Bluetooth-Windows/dp/B091PB9BZ4/ref=sr_1_1?crid=2A26KM4AFLMXF&keywords=2021+HP+15.6%27%27+HD+Laptop+PC+AMD+Dual-Core+Ryzen+3+3250U+4GB+DDR4+128GB+SSD+%2B+1TB+HDD+AMD+Radeon+Graphics+USB-C+HDMI+WiFi+AC+RJ45+Bluetooth+Webcam+HP+Fast+Charge+Windows+10+Home&qid=1653193797&sprefix=2021+hp+15.6%2Caps%2C377&sr=8-1",
                 "https://www.amazon.com/ASUS-Display-GeForce-Keyboard-G533ZX-XS96/dp/B09RN27LHT/ref=sr_1_4?crid=2LAB7MP3ZI3JF&keywords=ASUS%2BROG%2BStrix%2BScar%2B15&qid=1653194009&sprefix=asus%2Brog%2Bstrix%2Bscar%2B15%2Caps%2C402&sr=8-4&th=1",
                 "https://www.amazon.com/Lenovo-IdeaPad-Processor-Graphics-82KT00GVUS/dp/B09BG841VC/ref=sr_1_4?crid=1ICIY6Y9L1DEH&keywords=Lenovo+IdeaPad+3+Laptop%2C+14.0%22&qid=1653194071&sprefix=lenovo+ideapad+3+laptop%2C+14.0+%2Caps%2C1009&sr=8-4",
                 "https://www.amazon.com/HP-i5-1135G7-Processor-Micro-Edge-15-eg0010nr/dp/B08KGZVHCV/ref=sr_1_4?crid=3MG658JPWBB4X&keywords=HP+Pavilion+15+Laptop%2C+11th+Gen&qid=1653194120&sprefix=hp+pavilion+15+laptop%2C+11th+gen%2Caps%2C309&sr=8-4",
-                "https://www.amazon.com/Razer-Stealth-Ultrabook-Gaming-Laptop/dp/B08JSLM9K5/ref=sr_1_1?crid=2CQVXO4NZUJ2B&keywords=Razer+Blade+Stealth+13+Ultrabook+Gaming&qid=1653194167&sprefix=razer+blade+stealth+13+ultrabook+gaming%2Caps%2C318&sr=8-1",
-                "https://www.amazon.com/ASUS-GeForce-i7-10875H-Windows-G532LWS-DS76/dp/B0876M6CG9/ref=sr_1_5?crid=NDX2B2TISAAG&keywords=ASUS%2BROG%2BStrix%2BScar%2B15&qid=1653194236&sprefix=asus%2Brog%2Bstrix%2Bscar%2B15%2Caps%2C484&sr=8-5&th=1", };
+                "https://www.amazon.com/ASUS-GeForce-i7-10875H-Windows-G532LWS-DS76/dp/B0876M6CG9/ref=sr_1_5?crid=NDX2B2TISAAG&keywords=ASUS%2BROG%2BStrix%2BScar%2B15&qid=1653194236&sprefix=asus%2Brog%2Bstrix%2Bscar%2B15%2Caps%2C484&sr=8-5&th=1",
+                "https://www.amazon.com/Dell-XPS-17-9700-i7-10875H/dp/B094PJN4SG/ref=sr_1_3?crid=3EQG0RMCGZSH&keywords=Dell+XPS+17+9700&qid=1654508857&sprefix=dell+xps+17+9700%2Caps%2C978&sr=8-3" };
         for (String url : urlListAmz) {
             UrlRequest req = new UrlRequest();
             req.setUrl(url);
@@ -929,7 +929,9 @@ public class ProductServiceImpl implements ProductService {
                 "https://www.dienmayxanh.com/laptop/macbook-pro-14-m1-max-2021-10-core-cpu?src=osp",
                 "https://www.dienmayxanh.com/laptop/acer-aspire-7-gaming-a715-42g-r4xx-r5-nhqaysv008?src=osp",
                 "https://www.dienmayxanh.com/laptop/dell-inspiron-15-3511-i5-70270650?src=osp",
-                "https://www.dienmayxanh.com/laptop/hp-pavilion-15-eg0504tu-i7-1165g7-46m00pa?src=osp", };
+                "https://www.dienmayxanh.com/laptop/hp-pavilion-15-eg0504tu-i7-1165g7-46m00pa?src=osp",
+                "https://www.dienmayxanh.com/laptop/dell-vostro-5510-i5-70270646",
+        };
         for (String url : urlListDMX) {
             UrlRequest req = new UrlRequest();
             req.setUrl(url);
