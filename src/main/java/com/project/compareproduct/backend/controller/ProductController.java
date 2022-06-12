@@ -37,7 +37,7 @@ public class ProductController {
 	@Autowired
 	private ProductService productService;
 
-	@Scheduled(fixedDelay = 36000000, initialDelay = 1000)
+	@Scheduled(fixedRate = 3600000)
 	public void crawlListLaptopFPT() {
 		productService.crawlLaptopList();
 	}
