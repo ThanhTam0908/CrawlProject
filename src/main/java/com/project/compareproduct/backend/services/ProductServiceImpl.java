@@ -891,8 +891,32 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public void crawlLaptopList() {
-        List<LaptopFPT> laptopFPTList = new ArrayList<LaptopFPT>();
+        List<Product> productList = new ArrayList<Product>();
         // List<String> url = new ArrayList<String>();
+        String[] urlListNanoReview = { "https://nanoreview.net/en/laptop/samsung-galaxy-book-pro-13-2021",
+                "https://nanoreview.net/en/laptop/apple-macbook-pro-16-2021",
+                "https://nanoreview.net/en/laptop/hp-15-2021",
+                "https://nanoreview.net/en/laptop/asus-chromebook-cx9-cx9400",
+                "https://nanoreview.net/en/laptop/dell-alienware-m15-r3",
+                "https://nanoreview.net/en/laptop/apple-macbook-pro-14-2021",
+                "https://nanoreview.net/en/laptop/acer-aspire-7-a715-42g",
+                "https://nanoreview.net/en/laptop/dell-inspiron-15-5502",
+                "https://nanoreview.net/en/laptop/asus-rog-strix-scar-15-g533-2022",
+                "https://nanoreview.net/en/laptop/lenovo-ideapad-3i-gen-6-14",
+                "https://nanoreview.net/en/laptop/hp-pavilion-15",
+                "https://nanoreview.net/en/laptop/razer-blade-stealth-13-2020",
+                "https://nanoreview.net/en/laptop/dell-xps-15-9520-2022",
+                "https://nanoreview.net/en/laptop/asus-rog-strix-scar-15-g533",
+                "https://nanoreview.net/en/laptop/dell-vostro-5510",
+                "https://nanoreview.net/en/laptop/dell-latitude-5520",
+                "https://nanoreview.net/en/laptop/dell-xps-17-9700" };
+        for (String url : urlListNanoReview) {
+            UrlRequest req = new UrlRequest();
+            req.setUrl(url);
+            productList.add(crawlProduct(req));
+        }
+
+        List<LaptopFPT> laptopFPTList = new ArrayList<LaptopFPT>();
         String[] urlListFPT = { "https://fptshop.com.vn/may-tinh-xach-tay/hp-15s-du1110tu-i3-10110u",
                 "https://fptshop.com.vn/may-tinh-xach-tay/macbook-pro-16-2021-m1-pro?dung-luong=512gb",
                 "https://fptshop.com.vn/may-tinh-xach-tay/macbook-pro-14-2021-m1-pro?dung-luong=512gb",
